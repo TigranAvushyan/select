@@ -1,0 +1,81 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.select{
+    margin: 5rem auto;
+    width: 500px;
+    position: relative;
+    padding: 10px;
+}
+
+
+.select.open>.select-list{
+    display: block;
+}
+
+.select.open .open-icon{
+    transform: rotate(180deg);
+    transition: .3s ease;
+}
+
+.select.close>.select-list{
+    display: none;
+}
+
+.select.close .open-icon{
+    transform: rotate(360deg);
+    transition: .3s ease;
+}
+
+
+
+.select-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.select.open .background-click{
+    display: block;
+}
+.background-click{
+    display: none;
+    background: transparent;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.select-list{
+    background-color: #fff;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.select-item{
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.select-item:hover{
+    background: antiquewhite;
+    transition: .3s background ease;
+}
+
+.selected{
+    background: #fae1c4;
+}
